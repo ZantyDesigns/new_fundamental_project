@@ -11,7 +11,7 @@ jobs:
     steps:
       - run:
           name: Install JDK & Maven
-          command: ssh $SSH_USER@$SSH_HOST "sudo apt-get update && sudo apt-get install -y curl git | sudo -E bash - && sudo apt-get install openjdk-8-jdk"
+          command: ssh $SSH_USER@$SSH_HOST "sudo apt-get update && sudo apt-get install -y curl git && sudo apt-get install openjdk-8-jdk"
       - run:
           name: Clone Repo & Install Application Dependencies
           command: ssh $SSH_USER@$SSH_HOST "git clone https://github.com/ZantyDesigns/new_fundamental_project.git && cd ~/new_fundamental_project && sudo apt-get install maven"
