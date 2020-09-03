@@ -10,6 +10,12 @@ jobs:
       enabled: true
     steps:
       - run:
+        name: Clear Directories
+        command: rm - r /new_fundamental_project
+      - run:
+        name: Set data root
+        command: $ ls ~/data/
+      - run:
           name: Install JDK & Maven
           command: ssh $SSH_USER@$SSH_HOST "sudo apt-get update && sudo apt-get install -y curl git && sudo apt-get install -y openjdk-8-jdk"
       - run:
