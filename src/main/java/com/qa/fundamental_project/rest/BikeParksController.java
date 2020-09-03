@@ -21,6 +21,7 @@ public class BikeParksController {
     }
 
     @GetMapping("/getAllBikeParks")
+    @CrossOrigin(origins = "*")
     public ResponseEntity<List<BikeParksDTO>> getAllBikeParks(){
         return ResponseEntity.ok(this.bikeParksService.readAllBikeParks());
     }

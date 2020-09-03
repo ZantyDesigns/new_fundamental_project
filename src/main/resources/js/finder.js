@@ -1,5 +1,6 @@
 function displayBikeParks(){
     const req = new XMLHttpRequest();
+    console.log("hello world");
     req.onreadystatechange = () => {
         // Example handle logic
         if (req.status === 200 && req.readyState === 4) {
@@ -13,19 +14,20 @@ function displayBikeParks(){
                     let header = document.createElement('h1');
                     header.textContent = "Bike Park name: " + parks.name;
                     elem.appendChild(header);
-                   // parks.trails.forEach(trail => {
-                        console.log(parks) // print all notes for each notebook
-                        let name = document.createElement('p');
-                        let description = document.createElement('p');
-                        let address = document.createElement('p');
-                        name.textContent = "Trail Name: " + parks.name;
-                        description.textContent = "Description: " + parks.description;
-                        address.textContent = "Difficulty: " + parks.address;
-                        elem.appendChild(name);
-                        elem.appendChild(description);
-                        elem.appendChild(address);
 
-                   // })
+                  parks.trails.forEach(trail => {
+                        console.log(parks) // print all notes for each notebook
+                        let trailName = document.createElement('p');
+                        let trailDescription = document.createElement('p');
+                        let colours = document.createElement('p');
+                        trailName.textContent = "Trail Name: " + trail.trailName;
+                        trailDescription.textContent = "Description: " + trail.trailDescription;
+                        colours.textContent = "Address: " + trail.colours;
+                        elem.appendChild(trailName);
+                        elem.appendChild(trailDescription);
+                        elem.appendChild(colours);
+
+                   })
                     document.getElementById("bike-parks").appendChild(elem);
                 });
             } else {
@@ -41,8 +43,8 @@ function displayBikeParks(){
     req.send();
 }
 
-function submitTrail(){
-    let elements = document.getElementById("trail-form").elements;
+function submitPark(){
+    let elements = document.getElementById("park-form").elements;
     let obj ={};
     for(let i = 0 ; i < elements.length - 1 ; i++){
         let item = elements.item(i);
@@ -50,9 +52,9 @@ function submitTrail(){
     }
 
     const req = new XMLHttpRequest();
-    req.open("POST", "http://localhost:8080/createTrail");
+    req.open("POST", "http://localhost:8080/createBikeParks");
     req.onload = () => {
-        if (req.status === 200 && req.readyState == 4) {
+        if (req.status === 200 && req.readyState === 4) {
             console.log("Server Responded with: " + req.responseText);
         } else {
             console.log("Oops...");
