@@ -31,18 +31,18 @@ public class BikeParksController {
         return new ResponseEntity<>(this.bikeParksService.createBikeParks(bikeParks), HttpStatus.CREATED);
     }
 
-    @DeleteMapping("/deleteBikeParks/{parkId}")
-    public Boolean deleteTrails(@PathVariable Long parkId){
-        return this.bikeParksService.deleteBikeParksById(parkId);
+    @DeleteMapping("/deleteBikeParks/{id}")
+    public Boolean deleteTrails(@PathVariable Long id){
+        return this.bikeParksService.deleteBikeParksById(id);
     }
 
-    @GetMapping("/getBikeParkByIds/{parkId}")
-    public ResponseEntity<BikeParksDTO> getBikeParksById(@PathVariable Long parkId){
-        return ResponseEntity.ok(this.bikeParksService.findBikeParkById(parkId));
+    @GetMapping("/getBikeParkByIds/{id}")
+    public ResponseEntity<BikeParksDTO> getBikeParksById(@PathVariable Long id){
+        return ResponseEntity.ok(this.bikeParksService.findBikeParkById(id));
     }
 
-    @PutMapping("/updateBikeParks/{parkId}")
-    public ResponseEntity<BikeParksDTO> updateBikeParks(@PathVariable Long parkId, @RequestBody BikeParks bikeParks){
-        return ResponseEntity.ok(this.bikeParksService.updateBikePark(parkId, bikeParks));
+    @PutMapping("/updateBikeParks/{id}")
+    public ResponseEntity<BikeParksDTO> updateBikeParks(@PathVariable Long id, @RequestBody BikeParks bikeParks){
+        return ResponseEntity.ok(this.bikeParksService.updateBikePark(id, bikeParks));
     }
 }

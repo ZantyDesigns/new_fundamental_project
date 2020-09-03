@@ -12,7 +12,7 @@ public class BikeParks {
 
     @Id
     @GeneratedValue
-    private Long parkId;
+    private Long id;
 
     @Column
     private String name;
@@ -42,11 +42,11 @@ public class BikeParks {
     }
 
     public Long getId() {
-        return parkId;
+        return id;
     }
 
-    public void setId(Long parkId) {
-        this.parkId = parkId;
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getName() {
