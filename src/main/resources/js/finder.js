@@ -28,7 +28,7 @@ function displayBikeParks(){
                         elem.appendChild(colours);
 
                    })
-                    document.getElementById("bike-parks").appendChild(elem);
+                    document.getElementById("container").appendChild(elem);
                 });
             } else {
                 console.log(
