@@ -34,7 +34,7 @@ As a software developer, we have been assigned the task of planning and developi
 
 ## Entity Relationship Diagram
 An Entity Relationship Diagram was created during the planning stages of the project to help visualize what tables I would need to store in the database and the realtionships these tables had between each other.
-![erd](https://i.imgur.com/7vBNYIQ.png)
+![erd](https://i.imgur.com/VWKcqB5.png)
 
 ## Risk Assessment
 | Risk                                     | Analysis of Risk                                                                                                                                                                                                                 | Probability | Severity | Action                                                                                                                                                                                                                               |
