@@ -60,5 +60,5 @@ I would like to add more visual elements to the web application such as Google M
 
 ## Author
 * Jordan Hamilton
-*QA Cloud Native Consultant
-*JHamilton@QA.com
+* QA Cloud Native Consultant
+* JHamilton@QA.com
