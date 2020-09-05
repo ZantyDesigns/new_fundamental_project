@@ -59,6 +59,6 @@ As the project was progressivly updated and backed up via GitHub when new featur
 I would like to add more visual elements to the web application such as Google Maps API integration to view real time location data for each bike park entry. I would also like to add the ability for users to update current bike park entries to ensure the information stored is reliable. Furthermore, a user account creation feature would also be implemented so that registered accounts could personalize their own profiles with diaries of bike parks they have visited or added.
 
 ## Author
-Jordan Hamilton
-QA Cloud Native Consultant
-JHamilton@QA.com
+* Jordan Hamilton
+*QA Cloud Native Consultant
+*JHamilton@QA.com
