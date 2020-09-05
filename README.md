@@ -34,6 +34,7 @@ As a software developer, we have been assigned the task of planning and developi
 
 ## Jira & Sprints
 A kanban board was created using Jira to plan user stories and tasks in advance to track project development progress and stages. User stories were created to imitate scenarios of how the end user would be using the functionality of the web application and their expected outcome e.g. User can add new bike parks. Developement tasks were then generated for each user story to breakdown how these features were going to be implemented. These tasks and user stories were collectively added to a sprint which gave time contraints to each implementation. This allowed for efficient time management and the ability to visualize the level of importance for each task. 
+![jira](https://i.imgur.com/tV5gTFP.png)
 
 ## Entity Relationship Diagram
 An Entity Relationship Diagram was created during the planning stages of the project to help visualize what tables I would need to store in the database and the realtionships these tables had between each other.
@@ -60,4 +61,4 @@ I would like to add more visual elements to the web application such as Google M
 ## Author
 Jordan Hamilton
 QA Cloud Native Consultant
-JHmailton@QA.com
+JHamilton@QA.com
