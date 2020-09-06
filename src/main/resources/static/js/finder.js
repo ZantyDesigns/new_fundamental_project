@@ -75,7 +75,7 @@ function submitPark(){
     req.send(JSON.stringify({ name: obj.name, address: obj.address, county: obj.county, description: obj.description }));
 }
 
-function deletePark(id){
+function deletePark(){
     let elements = document.getElementById("bike-park-delete").elements;
     let del = {};
     for(let i = 0 ; i < elements.length - 1 ; i++){
@@ -83,7 +83,7 @@ function deletePark(id){
         del[item.name] = item.value;
     }
 
-    const URL = "http://35.230.144.143:8080/deleteBikeParksById/" + id;
+    const URL = "http://35.230.144.143:8080/deleteBikeParksById/" + del.id;
     const req = new XMLHttpRequest();
     req.open("DELETE", URL);
     req.onload = () => {
@@ -93,5 +93,5 @@ function deletePark(id){
             console.log("Oops...");
         }
     };
-    req.send(JSON.stringify({ id: del.id}));
+    req.send();
 }
