@@ -82,7 +82,9 @@ function deletePark(){
         let item = elements.item(i);
         del[item.name] = item.value;
     }
-    const URL = "http://35.230.144.143:8080/deleteBikeParksById/" + del.id;
+
+    let parkId = Number(del.id);
+    const URL = "http://35.230.144.143:8080/deleteBikeParksById/" + parkId;
     const req = new XMLHttpRequest();
     req.open("DELETE", URL);
     req.onload = () => {
