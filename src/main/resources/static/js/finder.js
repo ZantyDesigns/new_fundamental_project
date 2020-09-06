@@ -74,3 +74,23 @@ function submitPark(){
     req.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
     req.send(JSON.stringify({ name: obj.name, address: obj.address, county: obj.county, description: obj.description }));
 }
+
+function deletePark(){
+    let elements = document.getElementById("bike-park-delete").elements;
+    let del = {};
+    for(let i = 0 ; i < elements.length - 1 ; i++){
+        let item = elements.item(i);
+        del[item.name] = item.value;
+    }
+    const URL = "http://35.230.144.143:8080/deleteBikeParksById/" + del.id;
+    const req = new XMLHttpRequest();
+    req.open("DELETE", URL);
+    req.onload = () => {
+        if (req.status === 200 && req.readyState === 4) {
+            console.log("Server Responded with: " + req.responseText);
+        } else {
+            console.log("Oops...");
+        }
+    };
+    req.send();
+}
