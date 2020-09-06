@@ -3,7 +3,7 @@
 ### **_Resources_**
  * Presentation: https://docs.google.com/presentation/d/1bLm8JP-N2AEOxREivX_tC338M_pduU0nlrTgE1auUk8/edit?usp=sharing
  * Jira: https://jnah.atlassian.net/secure/RapidBoard.jspa?rapidView=1&projectKey=PROJ&atlOrigin=eyJpIjoiYWViZjkyZjQyYjI0NGUxYzhjMTQ2N2I2MzFkYWQ0ZTEiLCJwIjoiaiJ9
- * Website:
+ * Website: http://35.230.144.143:8080/html/index.html
  
 ## Contents
 * [Project Brief](#project-brief)
@@ -50,6 +50,11 @@ An Entity Relationship Diagram was created during the planning stages of the pro
 | Hackers tracking user location           | As the application is intended to be used as a mobile web application using Google Maps API, there is a possibility that intruders may be able to hack into the users device and gather real time location data.                 | Not Likely  | Severe   | Ensure user connections to the web server are heavily encrypted so location data cannot be accessed.                                                                                                                                 |
 
 ## Deployment
+* CircleCI
+CircleCI was integrated with GitHub to test and deploy the web application to GCP. A config file was created containing a list of jobs that the VM has to execute to tell the vm what dependancies and frameworks were needed to be installed. THis was required as all of the requireded dependancies were needed in order for the application to run at all.
+
+* Google Cloud Platform
+To allow for the project to become a web-based application, we needed a platform to host the application while it was running so that it could be accessed from multiple devices. An Virtual Machine instance was created with 
 
 
 ## Issues
