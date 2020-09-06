@@ -50,7 +50,7 @@ function displayBikeParks(){
             console.log("Oh no... handle error");
         }
     };
-    req.open("GET", "http://localhost:8080/getAllBikeParks");
+    req.open("GET", "http://35.230.144.143:8080/getAllBikeParks");
     req.send();
 }
 
@@ -63,7 +63,7 @@ function submitPark(){
     }
 
     const req = new XMLHttpRequest();
-    req.open("POST", "http://localhost:8080/createBikeParks");
+    req.open("POST", "http://35.230.144.143:8080/createBikeParks");
     req.onload = () => {
         if (req.status === 200 && req.readyState === 4) {
             console.log("Server Responded with: " + req.responseText);
