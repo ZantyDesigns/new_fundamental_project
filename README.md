@@ -35,6 +35,7 @@ A kanban board was created using Jira to plan user stories and tasks in advance 
 
 ## Entity Relationship Diagram
 An Entity Relationship Diagram was created during the planning stages of the project to help visualize what tables I would need to store in the database and the relationships these tables had between each other. The database structure for the application was fairly simple as a maximum of two tables were needed for the basic implementation. I had one table to store Bike Park information such as its ID, name address and description, and a table to store the trail data for each bike park which also needed an ID, a name and a description along with the colour to represent the difficulty of the trail.
+
 ![erd](https://i.imgur.com/VWKcqB5.png)
 
 ## Risk Assessment
