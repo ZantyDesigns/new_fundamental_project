@@ -18,7 +18,7 @@ jobs:
       - run:
           name: Deploy Application
           command: ssh $SSH_USER@$SSH_HOST "cd ~/new_fundamental_project && mvn spring-boot:run"
-          no_output_timeout: 45m
+          no_output_timeout: 100m
 workflows:
   version: 2.1
   test-and-deploy:
